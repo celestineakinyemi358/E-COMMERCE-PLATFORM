@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITOG E-commerce Platform</title>
+    <link rel="stylesheet" href="citog-ecommerce.css" />
+  </head>
+  <body>
+    <div class="shop-shell">
+      <header class="shop-header">
+        <div>
+          <p class="eyebrow">CITOG Commerce Studio</p>
+          <h1>
+            A classic, fascinating e-commerce experience with polished product
+            management and checkout flow.
+          </h1>
+          <p>
+            Explore a modern storefront built for curated product discovery,
+            fast checkout, and seamless cart management.
+          </p>
+        </div>
+        <div class="shop-controls">
+          <button id="refresh-shop" class="primary-btn">Refresh view</button>
+        </div>
+      </header>
+
+      <section class="shop-hero">
+        <div class="hero-copy">
+          <span class="hero-tag">Built for growth, designed for trust.</span>
+          <h2>Shop, manage, and sell with confidence.</h2>
+          <p>
+            CITOG brings product curation, sales analytics, and checkout
+            simplicity together in a beautiful commerce workspace.
+          </p>
+          <div class="hero-badges">
+            <span>Smart inventory</span>
+            <span>Responsive UX</span>
+            <span>Fast checkout</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-card">
+            <p class="eyebrow">Hot pick</p>
+            <h3>Signature leather bag</h3>
+            <p>
+              High-quality materials, flexible shipping, and premium
+              presentation.
+            </p>
+            <strong>$129</strong>
+          </div>
+        </div>
+      </section>
+
+      <main class="shop-grid">
+        <section class="products-panel panel">
+          <div class="panel-header">
+            <div>
+              <h3>Featured products</h3>
+              <p>Curated items with seamless add-to-cart actions.</p>
+            </div>
+            <span class="status-pill status-pill--strong">Checkout-ready</span>
+          </div>
+          <div id="products-list" class="products-list"></div>
+        </section>
+
+        <aside class="cart-panel panel">
+          <div class="panel-header">
+            <div>
+              <h3>Your cart</h3>
+              <p>Review items and complete checkout.</p>
+            </div>
+            <span id="cart-count" class="status-pill status-pill--online"
+              >0 items</span
+            >
+          </div>
+
+          <div id="cart-items" class="cart-items"></div>
+          <div class="checkout-summary">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="cart-subtotal">$0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Delivery</span>
+              <strong>$9.00</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <strong id="cart-total">$9.00</strong>
+            </div>
+            <button id="checkout-btn" class="primary-btn checkout-btn">
+              Complete checkout
+            </button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="citog-ecommerce.js"></script>
+  </body>
+</html>
