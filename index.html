@@ -4,22 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CITOG E-commerce Platform</title>
-    <link rel="stylesheet" href="citog-ecommerce.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="shop-shell">
       <header class="shop-header">
         <div>
-          <p class="eyebrow">CITOG Commerce Studio</p>
-          <h1>
+          <h2 class="eyebrow">CITOG Commerce Studio</h2>
+          <h3>
             A classic, fascinating e-commerce experience with polished product
             management and checkout flow.
-          </h1>
+          </h3>
           <p>
             Explore a modern storefront built for curated product discovery,
             fast checkout, and seamless cart management.
           </p>
         </div>
+        <a href="#featured-product" class="primary-btn">Feature products</a>
+        <a href="#your-cart" class="primary-btn">Your cart</a>
         <div class="shop-controls">
           <button id="refresh-shop" class="primary-btn">Refresh view</button>
         </div>
@@ -28,7 +30,7 @@
       <section class="shop-hero">
         <div class="hero-copy">
           <span class="hero-tag">Built for growth, designed for trust.</span>
-          <h2>Shop, manage, and sell with confidence.</h2>
+          <h3>Shop, manage, and sell with confidence.</h3>
           <p>
             CITOG brings product curation, sales analytics, and checkout
             simplicity together in a beautiful commerce workspace.
@@ -55,7 +57,7 @@
       <main class="shop-grid">
         <section class="products-panel panel">
           <div class="panel-header">
-            <div>
+            <div id="featured-product">
               <h3>Featured products</h3>
               <p>Curated items with seamless add-to-cart actions.</p>
             </div>
@@ -66,7 +68,7 @@
 
         <aside class="cart-panel panel">
           <div class="panel-header">
-            <div>
+            <div id="your-cart">
               <h3>Your cart</h3>
               <p>Review items and complete checkout.</p>
             </div>
@@ -97,6 +99,6 @@
       </main>
     </div>
 
-    <script src="citog-ecommerce.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,3 +1,17 @@
+/**
+ * @typedef {Object} Product
+ * @property {string} id
+ * @property {string} name
+ * @property {string} description
+ * @property {number} price
+ * @property {string} status
+ */
+
+/**
+ * @typedef {Product & { quantity: number }} CartItem
+ */
+
+/** @type {Product[]} */
 const products = [
   {
     id: 'bag-signature',
@@ -38,9 +52,14 @@ const checkoutBtn = document.getElementById('checkout-btn')
 const backDashboardBtn = document.getElementById('back-dashboard')
 const refreshShopBtn = document.getElementById('refresh-shop')
 
+/** @type {CartItem[]} */
 let cart = []
 const deliveryFee = 9
 
+/**
+ * @param {number} value
+ * @returns {string}
+ */
 function formatCurrency(value) {
   return `$${value.toFixed(2)}`
 }
@@ -86,6 +105,9 @@ function renderCart() {
     .join('')
 }
 
+/**
+ * @param {string} productId
+ */
 function addToCart(productId) {
   const product = products.find((item) => item.id === productId)
   if (!product) return
@@ -101,12 +123,19 @@ function addToCart(productId) {
   renderCart()
 }
 
+/**
+ * @param {string} productId
+ */
 function removeFromCart(productId) {
   cart = cart.filter((item) => item.id !== productId)
   updateCartStats()
   renderCart()
 }
 
+/**
+ * @param {string} productId
+ * @param {number} delta
+ */
 function changeQuantity(productId, delta) {
   const item = cart.find((entry) => entry.id === productId)
   if (!item) return
